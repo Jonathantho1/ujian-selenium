@@ -49,6 +49,7 @@ public class TestShop {
         WebElement addProduct =  driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/app-search-result/div/div/div[2]/mat-grid-list/div/mat-grid-tile[2]/div/mat-card/div[2]/button"));
         addProduct.click();
 
+        //addProduct Validation
         if(addProduct.isEnabled()){
             System.out.println("button pressed");
         }else {
