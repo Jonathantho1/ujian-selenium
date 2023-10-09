@@ -43,6 +43,12 @@ public class TestShop {
         }
 
         driver.findElement(By.id("loginButton")).click();
+        //loginButton Validation
+        if (driver.findElement(By.id("loginButton")).isEnabled()) {
+            System.out.println("Login button pressed");
+        }else {
+            System.out.println("Login button failed");
+        }
 
         //add product
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -51,9 +57,9 @@ public class TestShop {
 
         //addProduct Validation
         if(addProduct.isEnabled()){
-            System.out.println("button pressed");
+            System.out.println("button add product pressed");
         }else {
-            System.out.println("button unpressed");
+            System.out.println("button add product failed");
         }
 
         delay(3);
